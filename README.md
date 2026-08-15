@@ -1,4 +1,6 @@
 # LegalAI
 This is our SIH2026 Project Repository
-Team Leader: Devang Patel
+<br>
+Team Leader: Devang
+<br>
 Team members : Sufi,Sourabh,Ujjwal,Uttkarsh and Nisha
