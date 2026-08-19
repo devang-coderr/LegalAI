@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root { --bg-primary:#f4f0e7; --bg-secondary:#ebe4d5; --bg-surface:#fbf9f3; --bg-card:rgba(255,253,248,.88); --bg-glass:rgba(255,253,248,.74); --border-color:rgba(56,47,35,.15); --border-hover:rgba(141,108,49,.5); --text-primary:#1f2933; --text-secondary:#58616b; --text-muted:#8a877f; --accent-blue:#2a5b72; --accent-blue-glow:rgba(42,91,114,.14); --accent-violet:#675375; --accent-gold:#9a7431; --accent-gold-light:rgba(154,116,49,.14); --badge-bg:rgba(42,91,114,.08); --badge-text:#244e62; --input-bg:rgba(255,253,248,.78); --input-border:rgba(56,47,35,.2); }
+  .dark { --bg-primary:#16191f; --bg-secondary:#1e2329; --bg-surface:#242a33; --bg-card:rgba(30,35,41,.89); --bg-glass:rgba(22,25,31,.82); --border-color:rgba(168,174,184,.12); --border-hover:rgba(139,127,107,.4); --text-primary:#e8e6e1; --text-secondary:#a8aeb8; --text-muted:#7a7f8a; --accent-blue:#6b8596; --accent-blue-glow:rgba(107,133,150,.12); --accent-violet:#8b7f96; --accent-gold:#8b7f6b; --accent-gold-light:rgba(139,127,107,.12); --badge-bg:rgba(107,133,150,.08); --badge-text:#a8c4d9; --input-bg:rgba(16,19,25,.8); --input-border:rgba(168,174,184,.15); }
+  * { border-color:var(--border-color); } html,body { min-height:100vh; background:var(--bg-primary); } ::selection { background:var(--accent-gold-light); color:var(--text-primary); }
+}
+.font-sans { font-family:var(--font-sans),system-ui,sans-serif; } .font-serif { font-family:var(--font-serif),Georgia,serif; }
+/* Paper, ink and restrained metal replace generic SaaS glass. */
+.glass-panel { background:var(--bg-glass); border:1px solid var(--border-color); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.glass-card { background:var(--bg-card); border:1px solid var(--border-color); box-shadow:0 12px 32px rgba(42,35,23,.055); transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s; }
+.dark .glass-card { box-shadow:0 18px 50px rgba(0,0,0,.2); } .glass-card:hover { border-color:var(--border-hover); transform:translateY(-2px); box-shadow:0 18px 38px rgba(42,35,23,.1); }
+.legal-parchment { background:linear-gradient(135deg,rgba(154,116,49,.12),rgba(255,253,248,.15)); border-left:2px solid var(--accent-gold); } .dark .legal-parchment { background:linear-gradient(135deg,rgba(214,181,109,.1),rgba(8,17,27,.25)); }
+.cinematic-background { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0; background:var(--bg-primary); }.cinematic-background video,.cinematic-image,.cinematic-wash,.cinematic-columns { position:absolute; inset:0; width:100%; height:100%; }
+/* Standard opacity for non-hero backgrounds */
+.cinematic-background video { object-fit:cover; opacity:.28; filter:saturate(.55) contrast(1.05); }
+/* HERO VARIANT: Show the photo/video at full brightness with minimal overlay */
+.cinematic-background.hero-variant video { opacity:.95; filter:saturate(.92) contrast(1.1); }
+.cinematic-image { background:url('/cinematic/supreme-court.jpeg') 70% center / cover no-repeat; opacity:.13; mix-blend-mode:multiply; }
+.cinematic-background.hero-variant .cinematic-image { opacity:0; display:none; }
+.dark .cinematic-image { opacity:.09; mix-blend-mode:screen; filter:grayscale(1) sepia(.4); }
+/* Standard wash overlay for backgrounds */
+.cinematic-wash { background:radial-gradient(circle at 75% 14%,rgba(211,177,102,.15),transparent 34%),linear-gradient(90deg,var(--bg-primary) 0%,color-mix(in srgb,var(--bg-primary) 82%,transparent) 60%,color-mix(in srgb,var(--bg-primary) 50%,transparent)); }
+/* HERO VARIANT: Much lighter wash so the photo is clearly visible */
+.cinematic-background.hero-variant .cinematic-wash { background:radial-gradient(circle at 75% 14%,rgba(211,177,102,.04),transparent 34%),linear-gradient(90deg,transparent 0%,transparent 100%); }
+.dark .cinematic-wash { background:radial-gradient(circle at 75% 12%,rgba(107,133,150,.12),transparent 34%),linear-gradient(90deg,#16191f 0%,rgba(22,25,31,.88) 57%,rgba(22,25,31,.5)); }
+.dark .cinematic-background.hero-variant .cinematic-wash { background:radial-gradient(circle at 75% 12%,transparent,transparent),linear-gradient(90deg,transparent 0%,transparent 100%); }
+/* Standard column pattern */
+.cinematic-columns { opacity:.22; background:repeating-linear-gradient(90deg,transparent 0 8vw,rgba(154,116,49,.075) 8.1vw 8.6vw,transparent 8.7vw 16vw); mask-image:linear-gradient(to bottom,transparent,black 20%,transparent 88%); }
+/* HERO VARIANT: Hide the column pattern entirely so photos are crystal clear */
+.cinematic-background.hero-variant .cinematic-columns { opacity:0; display:none; }.workspace-atmosphere { position:fixed; inset:0; z-index:-1; opacity:.68; }
+.page-eyebrow { color:var(--accent-gold); letter-spacing:.16em; text-transform:uppercase; font-size:.68rem; font-weight:700; } input:focus,textarea:focus { outline:2px solid color-mix(in srgb,var(--accent-gold) 55%,transparent); outline-offset:2px; } ::-webkit-scrollbar { width:8px; height:8px; } ::-webkit-scrollbar-track { background:var(--bg-primary); } ::-webkit-scrollbar-thumb { background:color-mix(in srgb,var(--text-muted) 38%,transparent); border-radius:999px; }
+.workspace-sidebar { background:color-mix(in srgb,var(--bg-primary) 94%,#03050a); border-color:color-mix(in srgb,var(--border-color) 76%,transparent); }
+.workspace-brand { display:inline-flex; align-items:center; gap:.65rem; border-radius:.7rem; transition:opacity .2s ease; }.workspace-brand:hover { opacity:.8; }
+.workspace-brand-mark { display:grid; width:2rem; height:2rem; place-items:center; border-radius:50%; color:#a8c4d9; background:#1e2535; box-shadow:inset 0 1px rgba(255,255,255,.06); }
+.workspace-label { color:#7f8da9; font-size:.61rem; font-weight:700; letter-spacing:.19em; line-height:1; text-transform:uppercase; }
+.workspace-nav-item { display:flex; align-items:center; gap:.85rem; min-height:2.5rem; padding:0 .75rem; border-radius:.7rem; color:var(--text-secondary); font-size:.875rem; line-height:1; transition:color .18s ease,background-color .18s ease,box-shadow .18s ease; }
+.workspace-nav-item svg { color:#8a9aad; transition:color .18s ease,transform .18s ease; }.workspace-nav-item:hover { color:var(--text-primary); background:color-mix(in srgb,var(--bg-secondary) 70%,transparent); }.workspace-nav-item:hover svg { color:#a8c4d9; transform:translateX(1px); }
+.workspace-nav-item-active { color:#a8c4d9; background:#1e2a3a; box-shadow:inset 0 1px rgba(255,255,255,.025); }.workspace-nav-item-active svg { color:#96b4cc; }
+.dark .workspace-sidebar { background:#141820; border-color:rgba(168,174,184,.1); }.dark .workspace-nav-item-active { background:#1e2a3a; color:#a8c4d9; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }.cinematic-background video { display:none; } }
+
+@media (max-width:767px) { .cinematic-background video,.cinematic-columns { display:none; }.cinematic-image { opacity:.06; } }
+
+/* LegalAI workspace polish */
+.workspace-shell { position:relative; min-height:100vh; display:flex; background:var(--bg-primary); color:var(--text-primary); overflow:hidden; }
+.workspace-shell > .workspace-atmosphere { position:fixed; inset:0; z-index:0; opacity:1; }
+.workspace-shell main > div, .workspace-shell main > section, .workspace-shell main > article { position:relative; z-index:2; }
+.workspace-atmosphere .cinematic-image { opacity:.16; mix-blend-mode:normal; filter:saturate(.7) contrast(1.05); }
+.dark .workspace-atmosphere .cinematic-image { opacity:.12; filter:grayscale(.2) saturate(.65) contrast(1.08); }
+.workspace-atmosphere .cinematic-wash { background:linear-gradient(90deg,var(--bg-primary) 0%,color-mix(in srgb,var(--bg-primary) 82%,transparent) 58%,color-mix(in srgb,var(--bg-primary) 62%,transparent) 100%),radial-gradient(circle at 75% 15%,rgba(139,127,107,.14),transparent 35%); }
+.dark .workspace-atmosphere .cinematic-wash { background:linear-gradient(90deg,#16191f 0%,rgba(22,25,31,.9) 58%,rgba(22,25,31,.72) 100%),radial-gradient(circle at 75% 15%,rgba(107,133,150,.12),transparent 35%); }
+.workspace-shell main { background:transparent !important; }
+.workspace-shell section, .workspace-shell article { background-color:transparent !important; }
+.auth-backdrop { position:absolute; inset:0; background-image:linear-gradient(90deg,rgba(8,11,16,.92),rgba(8,11,16,.58)),url('/cinematic/supreme-court.jpeg'); background-size:cover; background-position:center; opacity:.9; }
+.auth-backdrop::after { content:""; position:absolute; inset:0; background:radial-gradient(circle at 70% 20%,rgba(139,127,107,.18),transparent 30%); }
+.hero-video-frame { position:absolute; inset:0; overflow:hidden; border-radius:2rem; }
+.hero-video-frame video { width:100%; height:100%; object-fit:cover; opacity:.24; filter:saturate(.8) contrast(1.08); }
+.hero-video-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(8,11,16,.82),rgba(8,11,16,.38) 58%,rgba(8,11,16,.16)),linear-gradient(180deg,rgba(8,11,16,.1),rgba(8,11,16,.55)); }
+@media (max-width:767px) { .workspace-atmosphere .cinematic-image { opacity:.08; } .hero-video-frame video { opacity:.14; } .hero-scene-video { display:none; } }
