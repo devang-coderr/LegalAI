@@ -1,0 +1,58 @@
+{
+  "documentId": "doc-ocr-22290",
+  "fileName": "sample_rental_agreement.txt",
+  "extractedText": "RESIDENTIAL LEASE AGREEMENT\nThis Residential Lease Agreement is executed on 01 April 2026 between Mr. Ramesh Chand (Landlord) and Mr. Anil Kumar (Tenant).\n\n1. PREMISES & TERM:\nThe Landlord leases Apartment 402, Green Valley Apartments, New Delhi for a period of 11 months commencing from 01 April 2026 and expiring on 01 March 2027.\n\n2. SECURITY DEPOSIT:\nThe Tenant has paid a refundable security deposit of Rs. 75,000. In case of any dispute or tenant vacating prior to lock-in period, the landlord reserves the right to forfeit the deposit.\n\n3. LOCK-IN PERIOD & PENALTY:\nThe first 6 months shall be a mandatory lock-in period. If the Tenant vacates during the lock-in period, the Tenant shall be liable to pay the remaining entire period rent as penalty.\n\n4. NOTICE PERIOD:\nThe Tenant must serve written notice before 30 January 2027 for non-renewal.\n\n5. RENT ESCALATION:\nUpon completion of 11 months, an automatic rent increase by 15% shall apply.\n",
+  "summary": "Residential Tenancy Agreement specifying rent, deposit refund, and dispute resolution terms.",
+  "detectedDates": [
+    {
+      "label": "Execution Date",
+      "date": "01 April 2026"
+    },
+    {
+      "label": "Lease Commencement Date",
+      "date": "01 March 2027"
+    },
+    {
+      "label": "Lease Expiry Date",
+      "date": "30 January 2027"
+    }
+  ],
+  "risks": [
+    {
+      "clause": "Unilateral Lock-In Penalty",
+      "riskLevel": "HIGH",
+      "explanation": "Clause imposes full remaining rent penalty on tenant for early vacation, without reciprocal liability on the landlord.",
+      "recommendation": "Negotiate a mutual 30-day notice exit clause with reciprocal termination penalties."
+    },
+    {
+      "clause": "Arbitrary Security Deposit Forfeiture",
+      "riskLevel": "HIGH",
+      "explanation": "Clause allows landlord to retain the security deposit arbitrarily without providing itemized repair estimates.",
+      "recommendation": "Add a statutory clause mandating refund within 30 days under Section 108(m) of Transfer of Property Act."
+    },
+    {
+      "clause": "Automatic Rent Escalation",
+      "riskLevel": "MEDIUM",
+      "explanation": "Automatic high percentage escalation clause exceeding customary statutory rent revision limits.",
+      "recommendation": "Cap annual escalation at standard 5% to 8% tied to written mutual agreement."
+    }
+  ],
+  "missingChecklist": [
+    {
+      "item": "Government Identity Proof (Aadhaar / PAN)",
+      "status": "VERIFIED"
+    },
+    {
+      "item": "Registered Rental Agreement Copy",
+      "status": "VERIFIED"
+    },
+    {
+      "item": "Security Deposit Bank Transfer Receipt",
+      "status": "MISSING"
+    },
+    {
+      "item": "Property Handover & Inventory Letter",
+      "status": "OPTIONAL"
+    }
+  ]
+}

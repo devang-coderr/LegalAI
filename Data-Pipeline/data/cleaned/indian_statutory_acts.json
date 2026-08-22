@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ACT-TPA-108M",
+    "act_name": "Transfer of Property Act, 1882",
+    "section_number": "Section 108(m)",
+    "section_title": "Duty of Lessee to Restore Property (Reasonable Wear & Tear)",
+    "legal_domain": "Property & Tenancy Law",
+    "statutory_text": "The lessee is bound to keep, and on the termination of the lease to restore, the property in as good condition as it was in at the time when he was put in possession, subject only to the changes caused by reasonable wear and tear or irresistible force.",
+    "plain_explanation": "A tenant is only responsible for returning the rented property in reasonable condition. Landlords cannot withhold security deposit for routine wear and tear without proving physical damage.",
+    "relevant_disputes": "Security deposit forfeiture, landlord tenant disputes, apartment handover."
+  },
+  {
+    "id": "ACT-ICA-73",
+    "act_name": "Indian Contract Act, 1872",
+    "section_number": "Section 73",
+    "section_title": "Compensation for Loss or Damage Caused by Breach of Contract",
+    "legal_domain": "Contract Law",
+    "statutory_text": "When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things.",
+    "plain_explanation": "Any party suffering financial loss due to breach of agreement (e.g. non-payment of refund or breach of service terms) can claim compensatory damages.",
+    "relevant_disputes": "Contract breach, supplier default, unpaid deposits, service deficiency."
+  },
+  {
+    "id": "ACT-ICA-27",
+    "act_name": "Indian Contract Act, 1872",
+    "section_number": "Section 27",
+    "section_title": "Agreement in Restraint of Trade Void",
+    "legal_domain": "Employment & Corporate Law",
+    "statutory_text": "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void.",
+    "plain_explanation": "Post-employment non-compete clauses restricting an employee from joining a competitor are generally void and unenforceable in India under Section 27.",
+    "relevant_disputes": "Employment contract non-compete, employee resignation, restraint of trade."
+  },
+  {
+    "id": "ACT-CPC-O9R13",
+    "act_name": "Code of Civil Procedure, 1908",
+    "section_number": "Order 9 Rule 13",
+    "section_title": "Setting Aside Decree Passed Ex-Parte Against Defendant",
+    "legal_domain": "Civil Procedure & Litigation",
+    "statutory_text": "In any case in which a decree is passed ex parte against a defendant, he may apply to the Court by which the decree was passed for an order to set it aside; and if he satisfies the Court that the summons was not duly served, or that he was prevented by any sufficient cause from appearing, the Court shall make an order setting aside the decree.",
+    "plain_explanation": "If a civil court passed a judgment in your absence without proper summons or because you were sick/prevented by genuine reason, you can apply to set aside the order.",
+    "relevant_disputes": "Ex-parte decree, missed court hearing date, improper summons service."
+  },
+  {
+    "id": "ACT-ARB-12",
+    "act_name": "Arbitration and Conciliation Act, 1996",
+    "section_number": "Section 12(5)",
+    "section_title": "Ineligibility of Arbitrator & Seventh Schedule Bar",
+    "legal_domain": "Commercial Arbitration",
+    "statutory_text": "Notwithstanding any prior agreement to the contrary, any person whose relationship with the parties or counsel falls under any of the categories specified in the Seventh Schedule shall be ineligible to be appointed as an arbitrator.",
+    "plain_explanation": "An employee, advisor, or interested person of a company cannot be appointed as a sole arbitrator to resolve that company's commercial dispute.",
+    "relevant_disputes": "Unilateral arbitrator appointment, commercial contract arbitration, arbitrator bias."
+  },
+  {
+    "id": "ACT-CPA-35",
+    "act_name": "Consumer Protection Act, 2019",
+    "section_number": "Section 35",
+    "section_title": "Manner in which Complaint shall be made to District Commission",
+    "legal_domain": "Consumer Protection Law",
+    "statutory_text": "A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by the consumer or any recognized consumer association.",
+    "plain_explanation": "A consumer who received defective products or deficient services (e-commerce, airlines, real estate, medical) can directly file a complaint before the District Consumer Commission.",
+    "relevant_disputes": "Defective goods, e-commerce refund refusal, medical negligence, builder delay."
+  },
+  {
+    "id": "ACT-BNS-316",
+    "act_name": "Bharatiya Nyaya Sanhita, 2023 (BNS)",
+    "section_number": "Section 316",
+    "section_title": "Criminal Breach of Trust (Corresponding to IPC Section 405/406)",
+    "legal_domain": "Criminal Law",
+    "statutory_text": "Whoever, being in any manner entrusted with property, dishonestly misappropriates or converts to his own use that property, commits criminal breach of trust.",
+    "plain_explanation": "Dishonestly misusing or refusing to return money, goods, or assets entrusted to someone in trust or under contract constitutes criminal breach of trust.",
+    "relevant_disputes": "Financial fraud, misappropriation of funds, fraudulent asset retention."
+  }
+]
