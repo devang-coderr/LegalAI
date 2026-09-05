@@ -1,0 +1,70 @@
+# Environment & Secret Files (CRITICAL - NEVER COMMIT)
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Node & Next.js Build Artifacts
+node_modules/
+.next/
+out/
+build/
+dist/
+.turbo
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python & Backend Artifacts
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Uploaded User Documents & Runtime Storage
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/logs/
+*.log
+
+# Operating System & IDE Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Internal Agent & Handoff Documentation (Excluded from public repo)
+AGENT_WORKING_README*.md
+CORPUS_READY_CHECK.md
+CORPUS_SOURCE_VERIFICATION.md
+RESTORATION_PLAN.md
+Frontend/AGENTS.md
+Frontend/CLAUDE.md
+Frontend/FRONTEND_COMPLETION.md
+Frontend/FRONTEND_INTEGRATION.md
+Frontend/VIDEO_ASSET_GUIDE.md
